@@ -6,7 +6,7 @@ from slackeventsapi import SlackEventAdapter
 
 app = Flask(__name__)
 
-slack_events_adapter = SlackEventAdapter(os.eviron.get("SLACK_EVENTS_TOKEN"), "/slack/events". app)
+slack_events_adapter = SlackEventAdapter(os.environ.get("SLACK_EVENTS_TOKEN"), "/slack/events", app)
 
 slack_web_client = WebClient(token=os.environ.get("SLACKBOT_TOKEN"))
 
