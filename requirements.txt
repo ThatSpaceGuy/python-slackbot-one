@@ -39,7 +39,7 @@ pluggy==0.13.1
 pre-commit==2.12.1
 py==1.11.0
 pyasn1==0.4.8
-pyee==9.0.4
+pyee==8.1.0
 pylint==2.7.2
 pyparsing==3.0.6
 pytest==5.3.2
