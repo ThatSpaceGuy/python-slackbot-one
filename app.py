@@ -49,7 +49,7 @@ if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080)
 
     print("Starting up!")
-    slack_web_client.chat_postMessage({
+    slack_web_client.chat_postMessage(**{
         "channel": "#awesometestchannel",
         "blocks": [
             {
