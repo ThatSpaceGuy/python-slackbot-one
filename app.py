@@ -14,7 +14,9 @@ MESSAGE_BLOCK = {
     "type": "section",
     "text": {
         "type": "mrkdwn",
-        "text": ""
+        "text": (
+                "Flexion Slackbot online!....\n\n"
+            ),
     }
 }
 
@@ -45,3 +47,18 @@ def message(payload):
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080)
+
+    slack_web_client.chat_postMessage({
+        "channel": "#awesometestchannel",
+        "blocks": [
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": (
+                        "Flexion Slackbot online!....\n\n"
+                    ),
+                }
+            }
+        ]
+    })
