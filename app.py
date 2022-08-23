@@ -20,13 +20,13 @@ MESSAGE_BLOCK = {
 
 @slack_events_adapter.on("message")
 def message(payload):
-
+    print("in message")
     event = payload.get("event", {})
-
+    print(f"got event: {event}")
     text = event.get("text")
-
+    print(f"got text: {text}")
     if "flip a coin" in text.lower():
-
+        print("in IF")
         channel_id = event.get("channel")
 
         rand_int = random.randint(0, 1)
